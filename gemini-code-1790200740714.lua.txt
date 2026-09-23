@@ -135,7 +135,7 @@ local _w1=_v9:CreateWindow({
     Theme="Amber",
     BackgroundImageTransparency=0.99,
     Size=UDim2.fromOffset(580,460),
-    Resizable=true,
+    Resizable=false,
     HideSearchBar=true,
     ScrollBarEnabled=false,
     OpenButton={
@@ -163,7 +163,7 @@ local tagExtensiones = _w1:Tag({
     Icon = "lucide:panda",
     Color = Color3.fromHex("#8c00ff"),
     Resizable = false,
-    Border = false
+    Border = true
 })
 
 -- Lógica para hacer los tags interactivos (botones)
