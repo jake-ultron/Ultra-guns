@@ -154,6 +154,7 @@ local tagDefensas = _w1:Tag({
     Title = "Defensas",
     Icon = "solar:shield-bold",
     Color = Color3.fromHex("#696969"),
+    Resizable = false,
     Border = true
 })
 
@@ -161,6 +162,7 @@ local tagExtensiones = _w1:Tag({
     Title = "extensiones",
     Icon = "lucide:panda",
     Color = Color3.fromHex("#8c00ff"),
+    Resizable = false,
     Border = false
 })
 
