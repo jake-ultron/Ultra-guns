@@ -64,7 +64,7 @@ local function _f1(st)
 [Enum.HumanoidStateType.Physics] = true,
 [Enum.HumanoidStateType.FallingDown] = true,
 [Enum.HumanoidStateType.GettingUp] = true,
-[Enum.HumanoidStateType.Ragdoll] = true
+[Enum.HumanoidStateType.Ragdoll] = false
             }
 
             if _v8.Character then
