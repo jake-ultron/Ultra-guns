@@ -151,18 +151,16 @@ local function _onDefensasClick()
         Title = "🛡️ Defensas",
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
-    })
-end
+    });task.delay(5,function() _b2=false end) end end})
 
 local function _onExtensionesClick()
     -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
     -- loadstring(game:HttpGet("https://tu-url-aqui/extensiones.lua"))()
     _v9:Notify({
-        Title = "🐼 Extensiones",
+        Title = "🤑se abrió los Emotes",
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
-    })
-end
+    });task.delay(5,function() _b2=false end) end end})
 
 -- Etiquetas visuales (se mantiene el diseño original)
 _w1:Tag({
