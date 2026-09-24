@@ -190,7 +190,7 @@ task.spawn(function()
     local uiContainer = GetSecureContainer()
     local _handlers = {
         ["defensas"]    = _onDefensasClick,
-        ["Cargar Emotes"] = _onCargar EmotesClick
+        ["Cargar Emotes"] = _onCargarEmotesClick
     }
     local _found = {}
 
