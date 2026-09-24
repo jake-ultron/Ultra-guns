@@ -151,18 +151,20 @@ _w1:SetToggleKey(Enum.KeyCode[_s1.UI.K])
 -- ==========================================
 local function _onDefensasClick()
     -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
-    --loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
+    -- loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
     _v9:Notify({
-        Title = "🛡️ se abrio Defensas",
-        Content = "Tag clickeado Loadstring pendiente por configurar",
+        Title = "🛡️ Defensas",
+        Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
     })
 end
 
-local function _onEmotesClick()
+local function _onExtensionesClick()
+    -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
+    -- loadstring(game:HttpGet("https://tu-url-aqui/extensiones.lua"))()
     _v9:Notify({
-        Title = "🤑 se abrio Emotes",
-        Content = "Tag clickeado Loadstring pendiente por configurar",
+        Title = "🐼 Extensiones",
+        Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
     })
 end
@@ -176,19 +178,19 @@ _w1:Tag({
 })
 
 _w1:Tag({
-    Title = "Cargar Emotes",
+    Title = "extensiones",
     Icon = "lucide:panda",
-    Color=Color3.fromRGB(255,165,0),
-    Border = true
+    Color = Color3.fromHex("#8c00ff"),
+    Border = false
 })
--- HACER LOS TAGS CLICKEABLES (con hover + touch + pointer)
+--HACER LOS TAGS CLICKEABLES (con hover + touch + pointer)
 -- ==========================================
 task.spawn(function()
-    task.wait(1.6)
+    task.wait(1.5)
     local uiContainer = GetSecureContainer()
     local _handlers = {
         ["defensas"]    = _onDefensasClick,
-        ["Emotes"] = _onEmotesClick
+        ["extensiones"] = _onExtensionesClick
     }
     local _found = {}
 
@@ -198,7 +200,8 @@ task.spawn(function()
             local cb = _handlers[txt]
             if cb and not _found[txt] then
                 _found[txt] = true
--- Buscar el contenedor padre clickeable (Tag base)
+
+                -- Buscar el contenedor padre clickeable (Tag base)
                 local clickTarget = obj
                 local parentBtn = obj:FindFirstAncestorWhichIsA("TextButton")
                                   or obj:FindFirstAncestorWhichIsA("ImageButton")
@@ -206,7 +209,8 @@ task.spawn(function()
 
                 clickTarget.Active = true
                 clickTarget.Selectable = true
--- 🖱️ Detección de clic (mouse + táctil)
+
+                -- 🖱️ Detección de clic (mouse + táctil)
                 clickTarget.InputBegan:Connect(function(input)
                     if input.UserInputType == Enum.UserInputType.MouseButton1
                     or input.UserInputType == Enum.UserInputType.Touch then
