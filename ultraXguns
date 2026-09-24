@@ -152,7 +152,7 @@ local function _onDefensasClick()
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
     });
-task.delay(5,function() _b2=false end) end end})
+task.delay(5,function() end end})
 
 local function _onExtensionesClick()
     -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
@@ -162,7 +162,7 @@ local function _onExtensionesClick()
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
     });
-task.delay(5,function() _b2=false end) end end})
+task.delay(5,function() end end})
 
 -- Etiquetas visuales (se mantiene el diseño original)
 _w1:Tag({
