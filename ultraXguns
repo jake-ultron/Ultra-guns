@@ -150,9 +150,11 @@ local function _onDefensasClick()
     _v9:Notify({
         Title = "🛡️ Defensas",
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
-        Duration = 3
-    });
-task.delay(5,function() end end})
+        Duration = 3,
+        task.delay = 5
+    })
+end
+end
 
 local function _onExtensionesClick()
     -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
@@ -161,9 +163,8 @@ local function _onExtensionesClick()
         Title = "🤑se abrió los Emotes",
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
         Duration = 3
-    });
-task.delay(5,function() end end})
-
+    })
+end
 -- Etiquetas visuales (se mantiene el diseño original)
 _w1:Tag({
     Title = "Defensas",
