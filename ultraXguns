@@ -156,7 +156,7 @@ local function _onDefensasClick()
     -- loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
     _v9:Notify({
         Title = "🛡️ Defensas",
-        Content = "Tag clickeado. Loadstring pendiente por configurar.",
+        Content = "Tag clickeado Loadstring pendiente por configurar",
         Duration = 3
     })
 end
@@ -166,7 +166,7 @@ local function _onExtensionesClick()
     -- loadstring(game:HttpGet("https://tu-url-aqui/extensiones.lua"))()
     _v9:Notify({
         Title = "🐼 Extensiones",
-        Content = "Tag clickeado. Loadstring pendiente por configurar.",
+        Content = "Tag clickeado Loadstring pendiente por configurar",
         Duration = 3
     })
 end
