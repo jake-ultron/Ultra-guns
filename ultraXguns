@@ -151,7 +151,7 @@ _w1:SetToggleKey(Enum.KeyCode[_s1.UI.K])
 -- ==========================================
 local function _onDefensasClick()
     -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
-    -- loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
+    --loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
     _v9:Notify({
         Title = "🛡️ se abrio Defensas",
         Content = "Tag clickeado Loadstring pendiente por configurar",
@@ -159,9 +159,8 @@ local function _onDefensasClick()
     })
 end
 
-local function _onExtensionesClick()
-    -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
-    -- loadstring(game:HttpGet("https://tu-url-aqui/extensiones.lua"))()
+local function _onCargar EmotesClick()
+    -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\72\117\98\47\114\101\102\115\47\104\101\97\100\115\47\66\114\97\110\99\104\47\71\85\73\83\47\69\109\111\116\101\115\46\108\117\97"))() end})
     _v9:Notify({
         Title = "🤑 se abrio Emotes",
         Content = "Tag clickeado Loadstring pendiente por configurar",
@@ -180,7 +179,7 @@ _w1:Tag({
 _w1:Tag({
     Title = "Cargar Emotes",
     Icon = "lucide:panda",
-    Color = Color3.fromHex("#8c00ff"),
+    Color=Color3.fromRGB(255,165,0),
     Border = true
 })
 -- HACER LOS TAGS CLICKEABLES (con hover + touch + pointer)
@@ -190,7 +189,7 @@ task.spawn(function()
     local uiContainer = GetSecureContainer()
     local _handlers = {
         ["defensas"]    = _onDefensasClick,
-        ["Cargar Emotes"] = _onCargar-EmotesClick
+        ["Cargar Emotes"] = _onCargar EmotesClick
     }
     local _found = {}
 
@@ -335,7 +334,6 @@ _tb4:Keybind({Title="UI Toggle Keybind",Desc="Tecla para ocultar o mostrar el me
 _tb4:Toggle({Title="Mover Botón DASH",Desc="Permite mover el botón DASH de forma táctil",Value=_s1.MB.D,Callback=function(s) _s1.MB.D=s end})
 
 local _tb3=_w1:Tab({Title="Scripts",Icon="solar:code-bold"})
-_tb3:Button({Title="🤑Cargar Emotes",Desc="Abre el menú de emotes universales",Color=Color3.fromRGB(255,165,0),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\72\117\98\47\114\101\102\115\47\104\101\97\100\115\47\66\114\97\110\99\104\47\71\85\73\83\47\69\109\111\116\101\115\46\108\117\97"))() end})
 _tb3:Button({Title="🗳️compuesto A-G-H v6 HS",Desc="Es una hitbox mejorada talvez mejor ke eso😼☝️",Color=Color3.fromRGB(160,32,240),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\71\89\115\53\115\120\68\84"))() end})
 _tb3:Button({Title="👁️Activar Visuales HS",Desc="Abre el menú separado de ESP y Chams",Color=Color3.fromRGB(255,100,0),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\107\54\69\68\97\65\113\112"))() end})
 _tb3:Button({Title="⌛A-R-T scrimer HS",Desc="un arma para darle un levanton al rival 😼💥",Color=Color3.fromRGB(46,204,113),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\109\104\116\50\107\99\78\67"))() end})
