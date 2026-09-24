@@ -150,10 +150,8 @@ local function _onDefensasClick()
     _v9:Notify({
         Title = "🛡️ Defensas",
         Content = "Tag clickeado. Loadstring pendiente por configurar.",
-        Duration = 3,
-        task.delay = 5
+        Duration = 3
     })
-end
 end
 
 local function _onExtensionesClick()
