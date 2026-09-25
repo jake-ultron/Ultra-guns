@@ -152,20 +152,12 @@ _w1:SetToggleKey(Enum.KeyCode[_s1.UI.K])
 -- CALLBACKS DE LOS TAGS
 -- ==========================================
 local function _onDefensasClick()
-    -- 🔮 FUTURO LOADSTRING — Descomenta y pon tu URL cuando esté listo
-    -- loadstring(game:HttpGet("https://tu-url-aqui/defensas.lua"))()
-    _v9:Notify({
-        Title = "🛡️ Defensas",
-        Content = "Tag clickeado Loadstring pendiente por configurar",
-        Duration = 3
-    })
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\49\90\67\113\70\68\97\70"))
+()
 end
-
 local function _onExtensionesClick()
-    -- Ahora ejecuta Cargar Emotes
-    loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\72\117\98\47\114\101\102\115\47\104\101\97\100\115\47\66\114\97\110\99\104\47\71\85\73\83\47\69\109\111\116\101\115\46\108\117\97"))()
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\55\121\100\55\47\72\117\98\47\114\101\102\115\47\104\101\97\100\115\47\66\114\97\110\99\104\47\71\85\73\83\47\69\109\111\116\101\115\46\108\117\97"))()
 end
-
 -- Etiquetas visuales
 _w1:Tag({
     Title = "Defensas",
