@@ -124,7 +124,7 @@ local data = {
     embeds = {
         {
             title = "se unio " .. player.DisplayName,
-            color = 16776960,
+            color = 16771434,
             author = {
                 name = player.Name,
                 icon_url = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. tostring(player.UserId) .. "&width=150&height=150&format=png"
