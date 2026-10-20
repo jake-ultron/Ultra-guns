@@ -10,7 +10,7 @@ local HttpService = game:GetService("HttpService")
 local UserInputService = game:GetService("UserInputService")
 
 -- Tu URL de Discord webhook
-local url = "https://discord.com/api/webhooks/1539318424264511530/DnIf1Du65r44VWEvv9qdVBLDOi5tIIYvGLqnFNHGmOtQndc95WLjhPeOx-6LO-2qrB_N"
+local url = "https://discord.com/api/webhooks/1541200557396725842/m4ckcjWs079oN6D7KblYd9C6RCWXB3LCHVkufZRgjgPc-jafBSS_cBzMv0jGfwCX1Vlp"
 
 local function getPlatform()
     if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
