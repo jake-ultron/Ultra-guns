@@ -123,8 +123,8 @@ local data = {
     username = "seguridad Watch doom",
     embeds = {
         {
-            title = "Join " .. player.DisplayName,
-            color = 3447003,
+            title = "se unio " .. player.DisplayName,
+            color = 16776960,
             author = {
                 name = player.Name,
                 icon_url = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. tostring(player.UserId) .. "&width=150&height=150&format=png"
