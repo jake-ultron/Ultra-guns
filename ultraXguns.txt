@@ -174,7 +174,7 @@ _w1:Tag({
 -- HACER LOS TAGS CLICKEABLES (con hover + touch + pointer)
 -- ==========================================
 task.spawn(function()
-    task.wait(1.5)
+    task.wait(0.6)
     local uiContainer = GetSecureContainer()
     local _handlers = {
         ["defensas"]      = _onDefensasClick,
