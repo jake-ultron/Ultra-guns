@@ -127,9 +127,9 @@ _f6(_btn1)
 -- CREACIÓN DE VENTANA (WINDUI)
 -- ==========================================
 local _w1=_v9:CreateWindow({
-    Title="☢️ Family HS HUB",
-    Author="by jake_Hs",
-    Folder="HsHub",
+    Title="☢️ Family CF HUB",
+    Author="by jake_CF",
+    Folder="UltraXHub",
     Accent=Color3.fromRGB(255,255,0),
     Transparent=true,
     Theme="Amber",
@@ -139,7 +139,7 @@ local _w1=_v9:CreateWindow({
     HideSearchBar=true,
     ScrollBarEnabled=false,
     OpenButton={
-        Title="☢️ HS ULTRA GUNS",
+        Title="☢️ ULTRA GUNS",
         CornerRadius=UDim.new(1,0),
         StrokeThickness=2,
         Enabled=true,
@@ -231,7 +231,7 @@ task.spawn(function()
     local targetStroke = nil
 
     for _, obj in ipairs(uiContainer:GetDescendants()) do
-        if (obj:IsA("TextLabel") or obj:IsA("TextButton")) and string.find(string.lower(obj.Text), "hs ultra guns") then
+        if (obj:IsA("TextLabel") or obj:IsA("TextButton")) and string.find(string.lower(obj.Text), "ULTRA GUNS") then
             local currentLayer = obj
             for i = 1, 4 do
                 if currentLayer then
@@ -337,13 +337,13 @@ _tb3:Button({Title="👻invisibles y otras variantes 👻💥",Desc="es una mini
 -- DETECTOR DE DESTRUCCIÓN SEGURO (LIMPIEZA TOTAL AL USAR LA 'X')
 -- =====================================================================
 task.spawn(function()
-    task.wait(2)
+    task.wait(1)
 
     local uiContainer = GetSecureContainer()
     local mainGui = nil
 
     for _, obj in ipairs(uiContainer:GetDescendants()) do
-        if obj:IsA("TextLabel") and obj.Text == "☢️ Family HS HUB" then
+        if obj:IsA("TextLabel") and obj.Text == "☢️ Family CF HUB" then
             mainGui = obj:FindFirstAncestorWhichIsA("ScreenGui")
             break
         end
@@ -369,7 +369,7 @@ task.spawn(function()
             end
         end)
     else
-        warn("[HsHub] Búsqueda Segura Activa: No se pudo anclar la limpieza automática.")
+        warn("[Hub] Búsqueda Segura Activa: No se pudo anclar la limpieza automática.")
     end
 end)
 -- ble 👻
