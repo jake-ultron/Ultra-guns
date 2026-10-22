@@ -224,24 +224,35 @@ task.spawn(function()
         warn("[HsHub] No se pudieron enlazar todos los tags como botones. Verifica que existan en el UI.")
     end
 end)
---rainbow borde-- 
+--rainbow borde corregido--
 task.spawn(function()
-    task.wait(3)
     local uiContainer = GetSecureContainer()
     local targetStroke = nil
-
-    for _, obj in ipairs(uiContainer:GetDescendants()) do
-        if (obj:IsA("TextLabel") or obj:IsA("TextButton")) and string.find(string.lower(obj.Text), "ULTRA GUNS") then
-            local currentLayer = obj
-            for i = 1, 4 do
-                if currentLayer then
-                    if not targetStroke then
-                        targetStroke = currentLayer:FindFirstChildOfClass("UIStroke")
+-- Bucle de reintento: busca por un máximo de 10 segundos en vez de esperar solo 3
+    local intentos = 0
+    while intentos < 20 and not targetStroke do
+        for _, obj in ipairs(uiContainer:GetDescendants()) do
+            -- Buscamos solo "ULTRA GUNS" para evitar fallos con el emoji
+            if (obj:IsA("TextLabel") or obj:IsA("TextButton")) and string.find(obj.Text, "ULTRA GUNS") then
+                local currentLayer = obj
+                for i = 1, 4 do
+                    if currentLayer then
+                        -- CORRECCIÓN AQUÍ: FindFirstChildWhichIsA(..., true) busca en TODOS los descendientes, no solo hijos directos
+                        local stroke = currentLayer:FindFirstChildWhichIsA("UIStroke", true)
+                        if stroke then
+                            targetStroke = stroke
+                            break
+                        end
+                        currentLayer = currentLayer.Parent
                     end
-                    currentLayer = currentLayer.Parent
                 end
+                if targetStroke then break end
             end
-            if targetStroke then break end
+        end
+        
+        if not targetStroke then
+            intentos = intentos + 1
+            task.wait(0.5) -- Espera medio segundo y vuelve a intentar
         end
     end
 
@@ -254,9 +265,10 @@ task.spawn(function()
             targetStroke.Color = colorYellow:Lerp(colorBlack, alpha)
         end)
     else
-        warn("[Hub] Error: No se pudo encontrar el contorno del OpenButton en el contenedor seguro.")
+        warn("[Hub] Error: No se pudo encontrar el contorno del OpenButton. Revisa si el botón se creó correctamente.")
     end
 end)
+
 -- PESTAÑAS Y FUNCIONES COMPLETAS
 -- ==========================================
 local _tb1=_w1:Tab({Title="Movilidad",Icon="solar:running-bold"})
