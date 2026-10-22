@@ -254,7 +254,7 @@ task.spawn(function()
             targetStroke.Color = colorYellow:Lerp(colorBlack, alpha)
         end)
     else
-        warn("[HsHub] Error: No se pudo encontrar el contorno del OpenButton en el contenedor seguro.")
+        warn("[Hub] Error: No se pudo encontrar el contorno del OpenButton en el contenedor seguro.")
     end
 end)
 -- PESTAÑAS Y FUNCIONES COMPLETAS
